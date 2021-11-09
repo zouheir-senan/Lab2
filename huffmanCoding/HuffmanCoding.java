@@ -1,6 +1,6 @@
 package huffmanCoding;
 
-import java.io.Console;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -84,10 +84,30 @@ public class HuffmanCoding {
 		return decision;
 	}
 	private static void handleDecodingNevText(Scanner scanner) {
+		System.out.println("Enter the text to decode:");
+		encoded = scanner.nextLine();
+		System.out.println("Text to Decode: "+ encoded);
+		decodeText();
+	}
+	private static void decodeText() {
 		// TODO Auto-generated method stub
 		
 	}
 	private static boolean handleEncodingNevText(Scanner scanner) {
+		System.out.println("Enter the text to encode :");
+		text = scanner.nextLine();
+		System.out.println("Text to Eecode: "+text);
+		
+		if(!IsSameCharacterSet()){
+			System.out.println("Not Vaild input");
+			text = "";
+			return false;
+		}
+		decodeText();
+		return false;
+	}
+
+	private static boolean IsSameCharacterSet() {
 		// TODO Auto-generated method stub
 		return false;
 	}
